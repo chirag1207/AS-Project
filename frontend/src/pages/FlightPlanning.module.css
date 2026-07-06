@@ -1,0 +1,180 @@
+/* ── Root layout ── */
+.root {
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  height: calc(100vh - 52px);
+  overflow: hidden;
+}
+
+/* ── Left panel ── */
+.left {
+  border-right: 1px solid var(--border);
+  overflow-y: auto;
+  padding: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  background: var(--surface);
+}
+
+.formCard { padding: 14px; }
+
+.formHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+.formTitle {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: .12em;
+  color: var(--text-muted);
+}
+
+.form { display: flex; flex-direction: column; gap: 9px; }
+.row2 { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+.row3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 8px; }
+
+.histCard { padding: 14px; }
+.flightList { display: flex; flex-direction: column; gap: 3px; margin-top: 8px; }
+
+.flightItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 7px 9px;
+  border-radius: 6px;
+  border: 1px solid transparent;
+  background: none;
+  cursor: pointer;
+  text-align: left;
+  font-family: "Inter", sans-serif;
+  color: var(--text);
+  transition: all .12s;
+}
+.flightItem:hover { background: var(--surface2); }
+.flightItem.flightActive { background: var(--accent-dim); border-color: rgba(249,115,22,.3); }
+
+.flightRoute { display: flex; align-items: center; gap: 6px; font-size: 13px; font-weight: 600; }
+.flightCode  { font-family: "JetBrains Mono", monospace; font-size: 12px; }
+.arrow       { color: var(--text-muted); }
+.flightMeta  { display: flex; gap: 10px; font-size: 11px; color: var(--text-muted); }
+
+/* ── Right panel ── */
+.right {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+/* Tab bar */
+.tabBar {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  padding: 8px 12px;
+  border-bottom: 1px solid var(--border);
+  background: var(--surface);
+  flex-shrink: 0;
+}
+
+.tab {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 5px 14px;
+  border-radius: 6px;
+  border: none;
+  background: transparent;
+  color: var(--text-muted);
+  font-size: 12px;
+  font-weight: 500;
+  cursor: pointer;
+  font-family: "Inter", sans-serif;
+  transition: all .12s;
+}
+.tab:hover { background: var(--surface2); color: var(--text); }
+.tab.tabActive { background: var(--accent-dim); color: var(--accent); font-weight: 600; }
+
+.tabFlight {
+  margin-left: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 1px;
+}
+.tabFlightCode {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--text);
+}
+.tabFlightMeta {
+  font-size: 10px;
+  color: var(--text-muted);
+}
+
+/* Map panel — fills remaining height */
+.mapPanel {
+  flex: 1;
+  overflow: hidden;
+  position: relative;
+}
+
+/* Analysis panel */
+.analysisPanel {
+  flex: 1;
+  overflow-y: auto;
+}
+
+/* Analysis content */
+.analysis {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  padding: 14px;
+}
+
+/* Summary card */
+.summaryCard {}
+.summaryRoute {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 12px;
+}
+.summaryAirport { display: flex; flex-direction: column; gap: 5px; align-items: center; }
+.icao {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 26px;
+  font-weight: 700;
+}
+.summaryArrow {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--accent);
+  font-size: 18px;
+}
+.arrowLine { flex: 1; height: 1px; background: var(--border2); }
+
+.summaryMeta { display: flex; flex-wrap: wrap; gap: 8px; }
+.metaChip {
+  font-size: 11px;
+  color: var(--text-muted);
+  background: var(--surface2);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  padding: 3px 9px;
+}
+
+.grid3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
+.grid2 { display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px; }
+
+.chartLoading { height: 240px; display: flex; align-items: center; justify-content: center; }
+
+@media (max-width: 1300px) {
+  .grid3 { grid-template-columns: repeat(2, 1fr); }
+}

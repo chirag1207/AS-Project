@@ -1,0 +1,111 @@
+.root {
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  height: calc(100vh - 52px);
+  overflow: hidden;
+}
+
+.left {
+  border-right: 1px solid var(--border);
+  overflow-y: auto;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.right { overflow-y: auto; padding: 16px; }
+
+.cardTitle {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: .12em;
+  color: var(--text-muted);
+  margin-bottom: 14px;
+}
+
+.form { display: flex; flex-direction: column; gap: 10px; }
+
+.guide { display: flex; flex-direction: column; gap: 10px; }
+.guideRow { display: flex; flex-direction: column; gap: 2px; }
+.term { font-size: 11px; font-weight: 700; color: var(--accent); font-family: "JetBrains Mono", monospace; }
+.def  { font-size: 11px; color: var(--text-muted); line-height: 1.5; }
+
+/* States */
+.loadingState {
+  display: flex; flex-direction: column; align-items: center;
+  justify-content: center; height: 50%; gap: 16px; color: var(--text-muted);
+}
+
+.emptyState {
+  display: flex; flex-direction: column; align-items: center;
+  justify-content: center; height: 60%; text-align: center;
+  gap: 12px; color: var(--text-muted);
+}
+.emptyIcon { font-size: 48px; opacity: .3; margin-bottom: 8px; }
+.emptyHint { font-size: 12px; color: var(--text-dim); }
+
+/* Results */
+.results { display: flex; flex-direction: column; gap: 14px; }
+
+.headerCard {}
+.headerRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 14px;
+}
+.airportName { font-size: 16px; font-weight: 700; }
+.airportIcao { font-family: "JetBrains Mono"; font-size: 22px; color: var(--accent); font-weight: 700; }
+.headerBadges { display: flex; gap: 8px; flex-wrap: wrap; }
+
+.metarRaw {
+  background: var(--bg);
+  border-radius: 6px;
+  padding: 8px 12px;
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+}
+.metarLabel {
+  font-size: 10px;
+  font-weight: 700;
+  color: var(--text-dim);
+  letter-spacing: .08em;
+  min-width: 44px;
+  margin-top: 1px;
+}
+.metarRaw code {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 11px;
+  color: var(--blue);
+  word-break: break-all;
+  line-height: 1.6;
+}
+
+.grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+
+.divider { border: none; border-top: 1px solid var(--border); margin: 12px 0; }
+
+.disclaimer {
+  margin-top: 12px;
+  font-size: 11px;
+  color: var(--text-dim);
+  line-height: 1.6;
+  background: var(--yellow-dim);
+  border: 1px solid rgba(210,153,34,.2);
+  border-radius: 5px;
+  padding: 8px 10px;
+}
+
+/* Wind rose */
+.windRose {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  padding: 8px 0;
+}
+.windStats { display: flex; flex-direction: column; gap: 12px; }
+.windStat { display: flex; flex-direction: column; gap: 2px; }
+.wsLabel { font-size: 10px; color: var(--text-dim); text-transform: uppercase; letter-spacing: .07em; }
+.wsVal   { font-size: 15px; font-weight: 700; font-family: "JetBrains Mono"; }

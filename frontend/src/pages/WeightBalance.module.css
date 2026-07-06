@@ -1,0 +1,107 @@
+.root {
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  height: calc(100vh - 52px);
+  overflow: hidden;
+}
+
+.left {
+  border-right: 1px solid var(--border);
+  overflow-y: auto;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+.right { overflow-y: auto; padding: 16px; }
+
+.cardTitle {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: .12em;
+  color: var(--text-muted);
+  margin-bottom: 14px;
+}
+
+.form { display: flex; flex-direction: column; gap: 10px; }
+.row3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 8px; }
+
+.stationSection {
+  background: var(--surface2);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 12px;
+}
+.stationTitle {
+  font-size: 10px;
+  font-weight: 700;
+  color: var(--text-dim);
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+
+/* CG status rows */
+.cgRow, .limitRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 0;
+  border-bottom: 1px solid var(--border);
+}
+.cgRow:last-child, .limitRow { border-bottom: none; }
+.cgLabel { font-size: 12px; color: var(--text-muted); font-weight: 500; }
+.cgVal   { font-size: 13px; font-weight: 600; font-family: "JetBrains Mono"; }
+
+/* States */
+.loadingState {
+  display: flex; align-items: center; justify-content: center; height: 50%;
+}
+.emptyState {
+  display: flex; flex-direction: column; align-items: center;
+  justify-content: center; height: 60%; text-align: center;
+  gap: 12px; color: var(--text-muted);
+}
+.emptyIcon { font-size: 48px; opacity: .3; margin-bottom: 8px; }
+.emptyHint { font-size: 12px; color: var(--text-dim); }
+
+/* Results */
+.results { display: flex; flex-direction: column; gap: 14px; }
+
+.headerCard {}
+.headerRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.acName { font-size: 16px; font-weight: 700; }
+.acCode { font-family: "JetBrains Mono"; font-size: 22px; color: var(--accent); font-weight: 700; }
+.headerBadges { display: flex; gap: 8px; flex-wrap: wrap; }
+
+.grid2 { display: grid; grid-template-columns: 1fr 1.4fr; gap: 14px; align-items: start; }
+
+.weightCol { display: flex; flex-direction: column; }
+
+.chartWrap { margin-top: 8px; }
+
+/* Envelope legend */
+.envelopeLegend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 10px;
+  padding-top: 10px;
+  border-top: 1px solid var(--border);
+}
+.legendItem { display: flex; flex-direction: column; gap: 2px; }
+.legendDot {
+  font-size: 10px;
+  font-weight: 800;
+  color: var(--accent);
+  font-family: "JetBrains Mono";
+  background: var(--accent-dim);
+  padding: 1px 6px;
+  border-radius: 3px;
+  width: fit-content;
+}
+.legendVal { font-size: 11px; color: var(--text-muted); }

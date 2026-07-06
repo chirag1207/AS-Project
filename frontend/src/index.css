@@ -1,0 +1,47 @@
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --bg:          #0d1117;
+  --surface:     #161b22;
+  --surface2:    #1c2433;
+  --border:      #21262d;
+  --border2:     #30363d;
+  --text:        #e6edf3;
+  --text-muted:  #8b949e;
+  --text-dim:    #484f58;
+  --accent:      #f97316;          /* APG orange */
+  --accent-dim:  rgba(249,115,22,.12);
+  --blue:        #58a6ff;
+  --blue-dim:    rgba(88,166,255,.12);
+  --green:       #3fb950;
+  --green-dim:   rgba(63,185,80,.12);
+  --red:         #f85149;
+  --red-dim:     rgba(248,81,73,.12);
+  --yellow:      #d29922;
+  --yellow-dim:  rgba(210,153,34,.12);
+  --purple:      #bc8cff;
+  --purple-dim:  rgba(188,140,255,.12);
+
+  /* flight categories */
+  --vfr:   #3fb950;
+  --mvfr:  #58a6ff;
+  --ifr:   #f85149;
+  --lifr:  #bc8cff;
+}
+
+html, body, #root {
+  height: 100%;
+  background: var(--bg);
+  color: var(--text);
+  font-family: "Inter", system-ui, sans-serif;
+  font-size: 14px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+.mono { font-family: "JetBrains Mono", monospace; }
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 6px; height: 6px; }
+::-webkit-scrollbar-track { background: var(--surface); }
+::-webkit-scrollbar-thumb { background: var(--border2); border-radius: 3px; }

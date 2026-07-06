@@ -1,0 +1,104 @@
+.root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  gap: 0;
+  height: 52px;
+  background: var(--surface);
+  border-bottom: 1px solid var(--border);
+  padding: 0 20px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-right: 32px;
+}
+.brandName {
+  font-size: 16px;
+  font-weight: 800;
+  letter-spacing: .05em;
+  color: var(--accent);
+}
+.brandFull {
+  font-size: 11px;
+  color: var(--text-muted);
+}
+
+.tabs {
+  display: flex;
+  gap: 2px;
+  flex: 1;
+}
+
+.tab {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 16px;
+  border-radius: 6px;
+  border: none;
+  background: transparent;
+  color: var(--text-muted);
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all .15s;
+  font-family: "Inter", sans-serif;
+}
+.tab:hover { background: var(--surface2); color: var(--text); }
+.tab.active {
+  background: var(--accent-dim);
+  color: var(--accent);
+  font-weight: 600;
+}
+
+.tabIcon { font-size: 14px; }
+
+.user {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-left: 16px;
+}
+.userInfo {
+  text-align: right;
+}
+.userName {
+  display: block;
+  font-size: 13px;
+  font-weight: 600;
+}
+.userRole {
+  display: block;
+  font-size: 10px;
+  color: var(--text-muted);
+  font-family: "JetBrains Mono", monospace;
+}
+
+.logoutBtn {
+  background: none;
+  border: 1px solid var(--border2);
+  border-radius: 5px;
+  color: var(--text-muted);
+  font-size: 12px;
+  padding: 4px 10px;
+  cursor: pointer;
+  font-family: "Inter", sans-serif;
+  transition: all .15s;
+}
+.logoutBtn:hover { border-color: var(--red); color: var(--red); }
+
+.main {
+  flex: 1;
+  overflow: auto;
+}
