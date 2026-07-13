@@ -1,0 +1,5 @@
+openap
+fastapi
+uvicorn[standard]
+requests
+python-multipart
