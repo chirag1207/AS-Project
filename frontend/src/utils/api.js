@@ -1,4 +1,4 @@
-const BASE = "/api";
+const BASE = "https://as-backend-production-1a7b.up.railway.app/api";
 
 function getToken() {
   return localStorage.getItem("apg_token");
