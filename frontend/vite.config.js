@@ -6,7 +6,7 @@ export default defineConfig({
   server: {
     port: 5173,
     proxy: {
-      "/api": "https://as-project-s75r.onrender.com",
+      "/api": "https://as-project-s75r.onrender.com/",
     },
   },
 });
