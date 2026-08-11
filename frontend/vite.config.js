@@ -6,7 +6,7 @@ export default defineConfig({
   server: {
     port: 5173,
     proxy: {
-      "/api": "https://as-backend-production-1a7b.up.railway.app",
+      "/api": "https://as-project-s75r.onrender.com",
     },
   },
 });
