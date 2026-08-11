@@ -1,4 +1,4 @@
-const BASE = "https://as-project-s75r.onrender.com";
+const BASE = "https://as-project-s75r.onrender.com/api";
 
 function getToken() {
   return localStorage.getItem("apg_token");
