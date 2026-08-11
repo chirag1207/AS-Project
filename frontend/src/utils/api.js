@@ -1,4 +1,4 @@
-const BASE = "https://as-backend-production-1a7b.up.railway.app/api";
+const BASE = "https://as-project-s75r.onrender.com";
 
 function getToken() {
   return localStorage.getItem("apg_token");
