@@ -7,7 +7,8 @@ integrated flight planning, runway performance analysis, and weight & balance co
 
 Built as a portfolio project using **Windsurf AI** as the primary development tool.
 
-> **Live Backend:** https://as-backend-production-1a7b.up.railway.app/docs
+> **Live Frontend:** https://lively-parfait-0c692c.netlify.app/
+
 
 ---
 
